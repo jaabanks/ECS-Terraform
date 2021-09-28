@@ -30,6 +30,8 @@ module "ecs-fargate" {
   task_container_port             = 80
   task_container_assign_public_ip = true
 
+  load_balanced = false
+
   target_groups = [
     {
       target_group_name = "tg-fargate-example"
